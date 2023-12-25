@@ -1,0 +1,328 @@
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    list-style: none;
+}
+
+:root {
+    --color: #fff;
+    --text-color: #fff;
+    --bg-color: #1b1f24;
+    --second-bg-color: #22282f;
+    --main-color: #ff6600;
+    --other-color: #c3cad5;
+
+    --h1-font: 4rem;
+    --h2-font: 2.4rem;
+    --p-font: 1rem;
+}
+
+/* body */
+
+body {
+    color: var(--color);
+    background: var(--bg-color);
+}
+
+/* header start */
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 10%;
+}
+
+header .logo {
+    width: 100px;
+    cursor: pointer;
+}
+
+header #menu {
+    font-size: 35px;
+    cursor: pointer;
+    display: none;
+    z-index: 10001;
+}
+
+nav ul {
+    display: flex;
+}
+
+header ul li::after {
+    content: "";
+    width: 0%;
+    height: 2px;
+    background: var(--main-color);
+    display: block;
+    margin: auto;
+    transition: all .5s ease;
+}
+
+header ul li:hover::after {
+    width: 55%;
+}
+
+header ul li a {
+    padding: 0 20px;
+    font-size: var(--p-font);
+    font-weight: 500;
+    color: var(--other-color);
+    transition: all .5s ease;
+}
+
+header ul li a:hover {
+    text-shadow: 3px 3px 20px var(--main-color), -2px -1px 30px var(--text-color);
+}
+
+.btn {
+    color: var(--main-color);
+    border: 2px solid var(--main-color);
+    padding: 11px 26px;
+    display: inline-block;
+    border-radius: 10px;
+    font-weight: 600;
+    transition: all .5s ease;
+}
+
+.btn:hover {
+    color: var(--bg-color);
+    background: var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+    transform: scale(1.1);
+}
+
+/* header end */
+
+/* main start */
+section {
+    padding: 110px 10% 90px;
+}
+
+.hero {
+    background-image: url(IMG/tee-png.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: inline-flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.main-content h4 {
+    font-size: 1.3rem;
+    color: var(--other-color);
+}
+
+.main-content h1 {
+    font-size: var(--h1-font);
+    font-weight: 800;
+    margin: 20px 0;
+    line-height: 1.2;
+}
+
+.main-content span {
+    color: var(--main-color);
+}
+
+.main-content p {
+    font-size: var(--p-font);
+    color: var(--other-color);
+    font-weight: 400;
+    width: 670px;
+    line-height: 25px;
+    margin-bottom: 25px;
+}
+
+.hero .social-icons {
+    margin-bottom: 40px;
+}
+
+.hero .social-icons i {
+    margin-right: 15px;
+    height: 40px;
+    width: 40px;
+    box-shadow: 0 0 20px transparent;
+    justify-content: center;
+    border-radius: 50%;
+    backdrop-filter: brightness(60%);
+    color: var(--main-color);
+    display: inline-flex;
+    align-items: center;
+    transition: all .5s ease;
+}
+
+.hero .social-icons i:hover {
+    box-shadow: 0 0 20px var(--main-color);
+    transform: scale(1.1);
+}
+
+.btn2 {
+    color: var(--bg-color);
+    background: var(--main-color);
+}
+
+.btn2:hover {
+    color: var(--main-color);
+    background: var(--bg-color);
+    transform: scale(1.0);
+}
+
+.btn3 {
+    margin-left: 20px;
+}
+
+.btn3:hover {
+    transform: scale(1.0);
+}
+
+header.sticky {
+    background: var(--bg-color);
+    box-shadow: 0 .1rem .1rem rgba(0, 0, 0, .2);
+    padding: 19px 5%;
+    transition: all .3s ease-in-out;
+}
+
+.about {
+    background: var(--bg-color);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1;
+    align-items: center;
+}
+
+.about-img img {
+    width: 100%;
+    max-width: 470px;
+    height: 470px;
+    border-radius: 50%;
+    border: 7px solid var(--main-color);
+    box-shadow: 0 0 20px var(--main-color);
+    transition: all .5s ease-in-out;
+}
+
+.about-img img:hover {
+    transform: scale(1.05);
+}
+
+.about-text {
+    margin-left: 20px;
+}
+
+.about-text h2 {
+    font-size: var(--h2-font);
+    font-weight: 700;
+    line-height: 1.3;
+    margin-bottom: 20px;
+}
+
+.about-text h2 span {
+    color: var(--main-color);
+}
+
+.exp-area {
+    margin-bottom: 40px;
+}
+
+.exp-area p {
+    font-size: 19px;
+    font-weight: 600;
+    color: var(--main-color);
+    line-height: 45px;
+}
+
+.exp-area span {
+    color: var(--other-color);
+    font-weight: 400;
+    margin-left: 10px;
+}
+
+span {
+    color: var(--main-color);
+}
+
+.center-text {
+    text-align: center;
+}
+
+.center-text h2 {
+    font-size: var(--h2-font);
+    margin-bottom: 80px;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, auto));
+    gap: 2rem;
+    align-items: center;
+}
+
+.services-content .box {
+    padding: 80px 40px 60px;
+    border: 1px solid var(--main-color);
+    border-radius: 29px;
+    background: #2d343f;
+    cursor: pointer;
+    transition: all .3s ease-in-out;
+}
+
+.services-content .box:hover {
+    box-shadow: 0 0 20px var(--main-color);
+    transform: translateY(-5px) scale(1.05);
+}
+
+.services-content .box img {
+    width: 80px;
+    margin-bottom: 20px;
+}
+
+.services-content .box h3 {
+    font-size: 30px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.services-content .box p {
+    font-size: 13px;
+    font-weight: 400;
+    color: var(--other-color);
+    margin-bottom: 25px;
+}
+
+.services-content .box a {
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+}
+
+.services-content .box a::after {
+    content: "";
+    width: 0%;
+    height: 1.5px;
+    display: block;
+    background: var(--main-color);
+    margin-top: 6px;
+    transition: all .5s ease-in-out;
+}
+
+.services-content .box a:hover::after {
+    width: 55%;
+}
+
+.services-content .box a i {
+    vertical-align: middle;
+    margin-left: 5px;
+    color: var(--main-color);
+    font-size: 20px;
+}
